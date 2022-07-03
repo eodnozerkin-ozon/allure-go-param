@@ -1,4 +1,4 @@
-module github.com/ozontech/allure-go/pkg/allure
+module github.com/eodnozerkin-ozon/allure-go-param/pkg/allure
 
 go 1.17
 
