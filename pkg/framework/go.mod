@@ -2,10 +2,10 @@ module github.com/eodnozerkin-ozon/allure-go-param/pkg/framework
 
 go 1.17
 
-replacegithub.com/eodnozerkin-ozon/allure-go-param/pkg/allure => ../allure
+replace github.com/eodnozerkin-ozon/allure-go-param/pkg/allure => ../allure
 
 require (
-	github.com/ozontech/allure-go/pkg/allure v1.1.0
+	github.com/eodnozerkin-ozon/allure-go-param/pkg/allure v1.1.0
 	github.com/pkg/errors v0.9.1
 	github.com/stretchr/testify v1.7.1
 )
