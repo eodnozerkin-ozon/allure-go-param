@@ -1,15 +1,15 @@
-module github.com/ozontech/allure-go
+module github.com/eodnozerkin-ozon/allure-go-param
 
 go 1.17
 
 replace (
-	github.com/ozontech/allure-go/pkg/allure => ./pkg/allure
-	github.com/ozontech/allure-go/pkg/framework => ./pkg/framework
+	github.com/eodnozerkin-ozon/allure-go-param/pkg/allure => ./pkg/allure
+	github.com/eodnozerkin-ozon/allure-go-param/pkg/framework => ./pkg/framework
 )
 
 require (
-	github.com/ozontech/allure-go/pkg/allure v0.5.6
-	github.com/ozontech/allure-go/pkg/framework v0.5.8
+	github.com/eodnozerkin-ozon/allure-go-param/pkg/allure v1.1.0
+	github.com/eodnozerkin-ozon/allure-go-param/pkg/framework v1.2.0
 )
 
 require (

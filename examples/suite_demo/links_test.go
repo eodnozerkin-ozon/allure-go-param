@@ -7,9 +7,9 @@ import (
 	"os"
 	"testing"
 
-	"github.com/ozontech/allure-go/pkg/allure"
-	"github.com/ozontech/allure-go/pkg/framework/provider"
-	"github.com/ozontech/allure-go/pkg/framework/suite"
+	"github.com/eodnozerkin-ozon/allure-go-param/pkg/allure"
+	"github.com/eodnozerkin-ozon/allure-go-param/pkg/framework/provider"
+	"github.com/eodnozerkin-ozon/allure-go-param/pkg/framework/suite"
 )
 
 type LinkDemoSuite struct {

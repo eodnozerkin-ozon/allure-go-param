@@ -106,7 +106,7 @@ import (
 package tests
 
 import (
-	"github.com/ozontech/allure-go/pkg/framework/suite"
+	"github.com/eodnozerkin-ozon/allure-go-param/pkg/framework/suite"
 )
 ``` 
 
@@ -164,8 +164,8 @@ package provider_demo
 import (
 	"testing"
 
-	"github.com/ozontech/allure-go/pkg/framework/runner"
-	"github.com/ozontech/allure-go/pkg/provider"
+	"github.com/eodnozerkin-ozon/allure-go-param/pkg/framework/runner"
+	"github.com/eodnozerkin-ozon/allure-go-param/pkg/provider"
 )
 
 func TestSampleDemo(t *testing.T) {
@@ -193,8 +193,8 @@ package provider_demo
 import (
 	"testing"
 
-	"github.com/ozontech/allure-go/pkg/framework/runner"
-	"github.com/ozontech/allure-go/pkg/provider"
+	"github.com/eodnozerkin-ozon/allure-go-param/pkg/framework/runner"
+	"github.com/eodnozerkin-ozon/allure-go-param/pkg/provider"
 )
 
 func TestSampleDemo(t *testing.T) {
@@ -225,8 +225,8 @@ package provider_demo
 import (
 	"testing"
 
-	"github.com/ozontech/allure-go/pkg/framework/runner"
-	"github.com/ozontech/allure-go/pkg/provider"
+	"github.com/eodnozerkin-ozon/allure-go-param/pkg/framework/runner"
+	"github.com/eodnozerkin-ozon/allure-go-param/pkg/provider"
 )
 
 func TestSampleDemo(t *testing.T) {
@@ -244,7 +244,7 @@ package provider_demo
 import (
 	"testing"
 
-	"github.com/ozontech/allure-go/pkg/framework/runner"
+	"github.com/eodnozerkin-ozon/allure-go-param/pkg/framework/runner"
 )
 
 func TestOtherSampleDemo(realT *testing.T) {
@@ -263,7 +263,7 @@ package provider_demo
 import (
 	"testing"
 
-	"github.com/ozontech/allure-go/pkg/framework/runner"
+	"github.com/eodnozerkin-ozon/allure-go-param/pkg/framework/runner"
 )
 
 func TestOtherSampleDemo(realT *testing.T) {
@@ -288,8 +288,8 @@ package provider_demo
 import (
 	"testing"
 
-	"github.com/ozontech/allure-go/pkg/framework/runner"
-	"github.com/ozontech/allure-go/pkg/provider"
+	"github.com/eodnozerkin-ozon/allure-go-param/pkg/framework/runner"
+	"github.com/eodnozerkin-ozon/allure-go-param/pkg/provider"
 )
 
 func TestOtherSampleDemo(realT *testing.T) {
@@ -327,7 +327,7 @@ type DemoSuite struct {
 ```go
 package suite_demo
 
-import "github.com/ozontech/allure-go/pkg/framework/suite"
+import "github.com/eodnozerkin-ozon/allure-go-param/pkg/framework/suite"
 
 type DemoSuite struct {
 	suite.Suite
@@ -339,7 +339,7 @@ type DemoSuite struct {
 ```go
 package suite_demo
 
-import "github.com/ozontech/allure-go/pkg/framework/suite"
+import "github.com/eodnozerkin-ozon/allure-go-param/pkg/framework/suite"
 
 type DemoSuite struct {
 	suite.Suite
@@ -364,8 +364,8 @@ package suite_demo
 import (
 	"testing"
 
-	"github.com/ozontech/allure-go/pkg/framework/runner"
-	"github.com/ozontech/allure-go/pkg/framework/suite"
+	"github.com/eodnozerkin-ozon/allure-go-param/pkg/framework/runner"
+	"github.com/eodnozerkin-ozon/allure-go-param/pkg/framework/suite"
 )
 
 type DemoSuite struct {
@@ -564,7 +564,7 @@ ___________________________________
 package examples
 
 import (
-	"github.com/ozontech/allure-go/pkg/framework/suite"
+	"github.com/eodnozerkin-ozon/allure-go-param/pkg/framework/suite"
 )
 
 type StepTreeDemoSuite struct {
@@ -603,8 +603,8 @@ package examples
 import (
 	"encoding/json"
 
-	"github.com/ozontech/allure-go/pkg/allure"
-	"github.com/ozontech/allure-go/pkg/framework/suite"
+	"github.com/eodnozerkin-ozon/allure-go-param/pkg/allure"
+	"github.com/eodnozerkin-ozon/allure-go-param/pkg/framework/suite"
 )
 
 type JSONStruct struct {
@@ -649,7 +649,7 @@ package examples
 import (
 	"testing"
 
-	"github.com/ozontech/allure-go/pkg/framework/suite"
+	"github.com/eodnozerkin-ozon/allure-go-param/pkg/framework/suite"
 )
 
 type TestRunningDemoSuite struct {
@@ -695,7 +695,7 @@ package examples
 import (
 	"testing"
 
-	"github.com/ozontech/allure-go/pkg/framework/suite"
+	"github.com/eodnozerkin-ozon/allure-go-param/pkg/framework/suite"
 )
 
 type BeforeAfterDemoSuite struct {
@@ -750,7 +750,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/ozontech/allure-go/pkg/framework/suite"
+	"github.com/eodnozerkin-ozon/allure-go-param/pkg/framework/suite"
 )
 
 type DemoSuite struct {
