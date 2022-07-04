@@ -47,7 +47,9 @@ func collectTests(runner *suiteRunner, suite InternalSuite) *suiteRunner {
 		if !ok {
 			continue
 		}
-		runner.AddTest(method.Name, method)
+		for i := 0; i < 2; i++ {
+			runner.AddTest(fmt.Sprintf("params: %d, name: %s", i, method.Name), method)
+		}
 	}
 	return runner
 }
