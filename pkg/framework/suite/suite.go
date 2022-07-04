@@ -35,6 +35,11 @@ func (s *Suite) RunSuite(t provider.T, suite InternalSuite) {
 
 func collectTests(runner *suiteRunner, suite InternalSuite) *suiteRunner {
 	methodFinder := reflect.TypeOf(suite)
+	s := reflect.TypeOf(suite)
+	sf, _ := s.Elem().FieldByName("params")
+	fmt.Println(reflect.ValueOf(sf).Int())
+	// rt := reflect.TypeOf(sf.Type)
+	// fmt.Println(rt.Elem().Kind())
 	for i := 0; i < methodFinder.NumMethod(); i++ {
 		method := methodFinder.Method(i)
 
@@ -47,9 +52,22 @@ func collectTests(runner *suiteRunner, suite InternalSuite) *suiteRunner {
 		if !ok {
 			continue
 		}
-		for i := 0; i < 2; i++ {
-			runner.AddTest(fmt.Sprintf("params: %d, name: %s", i, method.Name), method)
-		}
+
+		runner.AddTest(method.Name, method)
+
+		//methodFinder.NumMethod()
+
+		// for i := 0; i < methodFinder.NumField(); i++ {
+		// 	fmt.Printf("%+v\n", methodFinder.Field(i))
+		// }
+
+		// for i := 0; i < methodFinder.NumField(); i++ {
+		// 	fmt.Println(methodFinder.Field(i))
+		// }
+
+		// for i := 0; i < 2; i++ {
+		// runner.AddTest(fmt.Sprintf("params: %d, name: %s", i, method.Name), method)
+		// }
 	}
 	return runner
 }
