@@ -67,7 +67,7 @@
 ```go
 package runner
 
-import "github.com/ozontech/allure-go/pkg/provider"
+import "github.com/eodnozerkin-ozon/allure-go-param/pkg/provider"
 
 // ITestRunner TestRunner interface
 type ITestRunner interface {

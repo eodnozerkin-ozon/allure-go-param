@@ -8,10 +8,10 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/ozontech/allure-go/pkg/allure"
-	"github.com/ozontech/allure-go/pkg/framework/core/common"
-	"github.com/ozontech/allure-go/pkg/framework/core/constants"
-	"github.com/ozontech/allure-go/pkg/framework/provider"
+	"github.com/eodnozerkin-ozon/allure-go-param/pkg/allure"
+	"github.com/eodnozerkin-ozon/allure-go-param/pkg/framework/core/common"
+	"github.com/eodnozerkin-ozon/allure-go-param/pkg/framework/core/constants"
+	"github.com/eodnozerkin-ozon/allure-go-param/pkg/framework/provider"
 )
 
 type executionContextRunnerMock struct {
@@ -232,7 +232,7 @@ func TestNewRunner(t *testing.T) {
 	require.Equal(t, "suiteTest", suiteMeta.GetSuiteName())
 	require.Equal(t, "TestNewRunner", suiteMeta.GetSuiteFullName())
 	require.Equal(t, "TestNewRunner", suiteMeta.GetRunner())
-	require.Equal(t, "github.com/ozontech/allure-go/pkg/framework/runner", suiteMeta.GetPackageName())
+	require.Equal(t, "github.com/eodnozerkin-ozon/allure-go-param/pkg/framework/runner", suiteMeta.GetPackageName())
 	require.NotNil(t, suiteMeta.GetContainer())
 }
 
@@ -445,7 +445,7 @@ func TestRunner_RunTestsPanic(t *testing.T) {
 }
 
 func TestGetPackage(t *testing.T) {
-	require.Equal(t, "github.com/ozontech/allure-go/pkg/framework/runner", getPackage(1))
+	require.Equal(t, "github.com/eodnozerkin-ozon/allure-go-param/pkg/framework/runner", getPackage(1))
 }
 
 func TestRunner_FinishSuite(t *testing.T) {

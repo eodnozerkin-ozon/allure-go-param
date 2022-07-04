@@ -1,6 +1,6 @@
 package manager
 
-import "github.com/ozontech/allure-go/pkg/allure"
+import "github.com/eodnozerkin-ozon/allure-go-param/pkg/allure"
 
 // WithAttachments adds attachment to report in case of current execution context
 func (a *allureManager) WithAttachments(attachments ...*allure.Attachment) {

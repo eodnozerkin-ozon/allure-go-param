@@ -5,8 +5,8 @@ import (
 	"os"
 	"runtime"
 
-	"github.com/ozontech/allure-go/pkg/allure"
-	"github.com/ozontech/allure-go/pkg/framework/provider"
+	"github.com/eodnozerkin-ozon/allure-go-param/pkg/allure"
+	"github.com/eodnozerkin-ozon/allure-go-param/pkg/framework/provider"
 )
 
 // TestAdapter describes behavior of the test

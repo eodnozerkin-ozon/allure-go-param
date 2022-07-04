@@ -7,8 +7,8 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/ozontech/allure-go/pkg/framework/provider"
-	"github.com/ozontech/allure-go/pkg/framework/runner"
+	"github.com/eodnozerkin-ozon/allure-go-param/pkg/framework/provider"
+	"github.com/eodnozerkin-ozon/allure-go-param/pkg/framework/runner"
 )
 
 func TestSuite_SetRunner(t *testing.T) {

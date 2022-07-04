@@ -1,8 +1,8 @@
 package common
 
 import (
-	"github.com/ozontech/allure-go/pkg/allure"
-	"github.com/ozontech/allure-go/pkg/framework/core/constants"
+	"github.com/eodnozerkin-ozon/allure-go-param/pkg/allure"
+	"github.com/eodnozerkin-ozon/allure-go-param/pkg/framework/core/constants"
 )
 
 type ErrorT interface {

@@ -1,6 +1,6 @@
 package manager
 
-import "github.com/ozontech/allure-go/pkg/framework/core/allure_manager/ctx"
+import "github.com/eodnozerkin-ozon/allure-go-param/pkg/framework/core/allure_manager/ctx"
 
 // TestContext initiate test context
 func (a *allureManager) TestContext() {

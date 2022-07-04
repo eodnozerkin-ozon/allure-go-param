@@ -1,7 +1,7 @@
 package provider
 
 import (
-	"github.com/ozontech/allure-go/pkg/allure"
+	"github.com/eodnozerkin-ozon/allure-go-param/pkg/allure"
 )
 
 type Provider interface {

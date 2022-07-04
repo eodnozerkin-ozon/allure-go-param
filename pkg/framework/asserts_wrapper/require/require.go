@@ -3,8 +3,8 @@ package require
 import (
 	"time"
 
-	"github.com/ozontech/allure-go/pkg/allure"
-	"github.com/ozontech/allure-go/pkg/framework/asserts_wrapper/wrapper"
+	"github.com/eodnozerkin-ozon/allure-go-param/pkg/allure"
+	"github.com/eodnozerkin-ozon/allure-go-param/pkg/framework/asserts_wrapper/wrapper"
 )
 
 type ProviderT interface {

@@ -5,7 +5,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/ozontech/allure-go/pkg/allure"
+	"github.com/eodnozerkin-ozon/allure-go-param/pkg/allure"
 )
 
 type tRequireMock struct {

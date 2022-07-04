@@ -9,8 +9,8 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/ozontech/allure-go/pkg/framework/core/common"
-	"github.com/ozontech/allure-go/pkg/framework/runner"
+	"github.com/eodnozerkin-ozon/allure-go-param/pkg/framework/core/common"
+	"github.com/eodnozerkin-ozon/allure-go-param/pkg/framework/runner"
 )
 
 type TestingT interface {

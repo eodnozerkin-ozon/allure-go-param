@@ -3,7 +3,7 @@ package helper
 import (
 	"time"
 
-	"github.com/ozontech/allure-go/pkg/framework/asserts_wrapper/wrapper"
+	"github.com/eodnozerkin-ozon/allure-go-param/pkg/framework/asserts_wrapper/wrapper"
 )
 
 type a struct {

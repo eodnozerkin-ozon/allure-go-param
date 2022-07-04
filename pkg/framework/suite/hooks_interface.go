@@ -1,7 +1,7 @@
 package suite
 
 import (
-	"github.com/ozontech/allure-go/pkg/framework/provider"
+	"github.com/eodnozerkin-ozon/allure-go-param/pkg/framework/provider"
 )
 
 // AllureBeforeTest has a BeforeEach method, which will run before each

@@ -8,9 +8,9 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/ozontech/allure-go/pkg/allure"
-	"github.com/ozontech/allure-go/pkg/framework/core/common"
-	"github.com/ozontech/allure-go/pkg/framework/provider"
+	"github.com/eodnozerkin-ozon/allure-go-param/pkg/allure"
+	"github.com/eodnozerkin-ozon/allure-go-param/pkg/framework/core/common"
+	"github.com/eodnozerkin-ozon/allure-go-param/pkg/framework/provider"
 )
 
 type InternalT interface {

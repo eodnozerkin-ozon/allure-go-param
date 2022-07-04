@@ -5,9 +5,9 @@ import (
 	"runtime/debug"
 	"sync"
 
-	"github.com/ozontech/allure-go/pkg/allure"
-	"github.com/ozontech/allure-go/pkg/framework/asserts_wrapper/helper"
-	"github.com/ozontech/allure-go/pkg/framework/provider"
+	"github.com/eodnozerkin-ozon/allure-go-param/pkg/allure"
+	"github.com/eodnozerkin-ozon/allure-go-param/pkg/framework/asserts_wrapper/helper"
+	"github.com/eodnozerkin-ozon/allure-go-param/pkg/framework/provider"
 )
 
 type StepProvider interface {
