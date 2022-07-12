@@ -36,6 +36,7 @@ type testFunc func(t provider.T)
 type test struct {
 	testBody testFunc
 	testMeta provider.TestMeta
+	param    interface{}
 }
 
 func newTest(body testFunc, testMeta provider.TestMeta) *test {
@@ -208,6 +209,10 @@ func (r *runner) RunTests() map[string]bool {
 					defer finishTest(testData.testMeta)
 
 					testT := setupTest(t, r.internalT.GetProvider(), testData.testMeta)
+
+					// set test param
+					testT.SetParam(testData.param)
+
 					// after each hook
 					defer func() {
 						_, _ = runHook(testT, afterEachHook)

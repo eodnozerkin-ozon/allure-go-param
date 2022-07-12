@@ -25,6 +25,8 @@ type Common struct {
 	xSkip bool
 
 	wg sync.WaitGroup
+
+	param interface{}
 }
 
 // NewT returns Common instance that implementing provider.T interface
@@ -245,6 +247,14 @@ func (c *Common) Run(testName string, testBody func(provider.T), tags ...string)
 
 func (c *Common) SetRealT(realT provider.TestingT) {
 	c.TestingT = realT
+}
+
+func (c *Common) GetParam() interface{} {
+	return c.param
+}
+
+func (c *Common) SetParam(param interface{}) {
+	c.param = param
 }
 
 func copyLabels(input, target *allure.Result) *allure.Result {

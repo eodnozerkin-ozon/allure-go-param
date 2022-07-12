@@ -28,6 +28,9 @@ type T interface {
 
 	WithNewStep(stepName string, step func(sCtx StepCtx), params ...allure.Parameter)
 	WithNewAsyncStep(stepName string, step func(sCtx StepCtx), params ...allure.Parameter)
+
+	SetParam(interface{})
+	GetParam() interface{}
 }
 
 type StepCtx interface {

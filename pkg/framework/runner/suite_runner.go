@@ -7,6 +7,7 @@ import (
 	"reflect"
 	"regexp"
 	"strings"
+	"unsafe"
 
 	"github.com/ozontech/allure-go/pkg/framework/core/allure_manager/adapter"
 	"github.com/ozontech/allure-go/pkg/framework/core/allure_manager/manager"
@@ -103,6 +104,10 @@ func collectTests(runner *suiteRunner, suite InternalSuite) *suiteRunner {
 		suiteFullName = runner.internalT.GetProvider().GetSuiteMeta().GetSuiteFullName()
 	)
 
+	ptrSuite := reflect.ValueOf(suite)
+	structSuite := ptrSuite.Elem()
+	structFieldParams1 := structSuite.FieldByName("params")
+
 	for i := 0; i < methodFinder.NumMethod(); i++ {
 		method := methodFinder.Method(i)
 
@@ -116,16 +121,30 @@ func collectTests(runner *suiteRunner, suite InternalSuite) *suiteRunner {
 			continue
 		}
 
-		testMeta := adapter.NewTestMeta(suiteFullName, suiteName, method.Name, packageName)
-		runner.tests[method.Name] = &test{
-			testMeta: testMeta,
-			testBody: func(testT provider.T) {
-				callArgs := []reflect.Value{
-					reflect.ValueOf(suite),
-					reflect.ValueOf(testT),
+		iter := structFieldParams1.MapRange()
+		for iter.Next() {
+			k := iter.Key()
+			if k.String() == "all" || k.String() == method.Name {
+				v := iter.Value()
+				if v.Kind() == reflect.Slice {
+					for i := 0; i < v.Len(); i++ {
+						testParam := v.Index(i)
+						testMeta := adapter.NewTestMeta(suiteFullName, suiteName, fmt.Sprintf("%s-%s-%d", method.Name, k, i), packageName)
+						runner.tests[fmt.Sprintf("%s-%s-%d", method.Name, k, i)] = &test{
+							testMeta: testMeta,
+							testBody: func(testT provider.T) {
+								callArgs := []reflect.Value{
+									reflect.ValueOf(suite),
+									reflect.ValueOf(testT),
+								}
+								method.Func.Call(callArgs)
+							},
+							param: reflect.NewAt(testParam.Type(), unsafe.Pointer(testParam.UnsafeAddr())).Elem().Interface(), // new object :(
+						}
+					}
 				}
-				method.Func.Call(callArgs)
-			},
+			}
+
 		}
 	}
 	return runner
